@@ -30,7 +30,7 @@ app.use('/api/gasto', gastoRouter)
 app.use('/', (req, res) => {
     res.status(200).json({ msg: "API funcionando!" })
 })
-console.log('deu boa')
+console.log('deu boa!')
 
 // conectar mongoDB ATLAS
 const DB_USER = process.env.DB_USER
