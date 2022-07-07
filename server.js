@@ -18,9 +18,6 @@ app.use(cors())
 app.use(express.json())
 
 // importar rotas
-app.use('/', (req, res) => {
-    res.status(200).json({ msg: "API funcionando!" })
-})
 
 // routes
 const authRouter = require("./routes/authRoutes.js");
@@ -30,6 +27,9 @@ const gastoRouter = require('./routes/gastoRoutes')
 app.use("/api/auth", authRouter);
 app.use("/api/user", verifyToken, userRouter);
 app.use('/api/gasto', gastoRouter)
+app.use('/', (req, res) => {
+    res.status(200).json({ msg: "API funcionando!" })
+})
 
 // conectar mongoDB ATLAS
 const DB_USER = process.env.DB_USER
