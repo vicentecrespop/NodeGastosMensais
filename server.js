@@ -30,7 +30,6 @@ app.use('/api/gasto', gastoRouter)
 app.use('/', (req, res) => {
     res.status(200).json({ msg: "API funcionando!" })
 })
-console.log('deu boa!')
 
 // conectar mongoDB ATLAS
 const DB_USER = process.env.DB_USER
@@ -38,7 +37,6 @@ const DB_PASS = process.env.DB_PASS
 const url = `mongodb+srv://${DB_USER}:${DB_PASS}@cluster0.liky5cy.mongodb.net/?retryWrites=true&w=majority`
 
 const port = process.env.PORT || 3000
-console.log('Deu boa até aqui!')
 
 mongoose.connect(url)
     .then(() => {
