@@ -18,7 +18,7 @@ app.use(cors())
 app.use(express.json())
 
 // importar rotas
-app.use('/', (req, res) => {
+app.get('/', (req, res) => {
     res.status(200).json({ msg: "API funcionando!" })
 })
 
