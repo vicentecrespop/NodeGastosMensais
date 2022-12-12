@@ -11,8 +11,6 @@ router.post("/register", async (req, res) => {
     const password = req.body.password;
     const confirmpassword = req.body.confirmpassword;
 
-    // console.log(req.body);
-
     // check for required fields
     if(name === null || email === null || password === null || confirmpassword === null) {
         return res.status(400).json({ error: "Por favor, preencha todos os campos." });
