@@ -10,6 +10,8 @@ app.use(
         extended: true
     })
 )
+app.use(express.static('public'))
+
 
 // middlewares
 const verifyToken = require("./helpers/check-token");
